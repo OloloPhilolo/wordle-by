@@ -14603,8 +14603,8 @@ this.wordle = this.wordle || {}, this.wordle.bundle = function(exports) {
   /** @type {string} */
   cached.innerHTML = '\n  <div class="countdown">\n    <h1>Наступны ЎОРДЛІ</h1>\n    <div id="timer">\n      <div class="statistic-container">\n        <div class="statistic timer">\n          <countdown-timer></countdown-timer>\n        </div>\n      </div>\n    </div>\n  </div>\n  <div class="share">\n    <button id="share-button">\n      Падзяліцца <game-icon icon="share"></game-icon>\n    </button>\n  </div>\n';
   var dragitemhomes = {
-    currentStreak : "Бягучая сэрыя",
-    maxStreak : "Лепшая сэрыя",
+    currentStreak : "Бягучая серыя",
+    maxStreak : "Найлепшая серыя",
     winPercentage : "% перамог",
     gamesPlayed : "Усяго гульняў",
     gamesWon : "Перамог",
