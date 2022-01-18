@@ -944,7 +944,7 @@ this.wordle = this.wordle || {}, this.wordle.bundle = function(exports) {
   function isDate(a) {
     var i;
     var j = getTime(a);
-    return i = j * 22543 % options.length, options[i];
+    return i = j * 26641 % options.length, options[i];
   }
   /**
    * @param {!Date} token
