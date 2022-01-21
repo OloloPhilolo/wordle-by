@@ -920,10 +920,19 @@ this.wordle = this.wordle || {}, this.wordle.bundle = function(exports) {
    */
   function ordinal(number) {
     /** @type {!Array} */
-    var suffixes = ["th", "st", "nd", "rd"];
-    /** @type {number} */
-    var a = number % 100;
-    return number + (suffixes[(a - 20) % 10] || suffixes[a] || suffixes[0]);
+    switch(number) {
+      case 1:
+        return "Першая";
+      case 2:
+        return "Другая";
+      case 3:
+        return "Трэцяя";
+      case 4:
+        return "Чацвёртая";
+	  case 5:
+        return "Пятая";
+    }
+	return number + "-я";
   }
   /**
    * @param {!Date} obj
@@ -13938,7 +13947,7 @@ this.wordle = this.wordle || {}, this.wordle.bundle = function(exports) {
   /** @type {string} */
   var c = "present";
   /** @type {string} */
-  var o = "correct";
+  var correctLetter = "correct";
   /** @type {string} */
   var bytes = "absent";
   var settings = {
@@ -14050,10 +14059,10 @@ this.wordle = this.wordle || {}, this.wordle.bundle = function(exports) {
               /** @type {number} */
               var i = 0;
               for (; i < word.length; i++) {
-                if (word[i] === o && x[i] !== obj[i]) {
+                if (word[i] === correctLetter && x[i] !== obj[i]) {
                   return {
                     validGuess : false,
-                    errorMessage : "".concat(ordinal(i + 1), " letter must be ").concat(obj[i].toUpperCase())
+                    errorMessage : "".concat(ordinal(i + 1), " літара павінна быць ").concat(obj[i].toUpperCase())
                   };
                 }
               }
@@ -14061,7 +14070,7 @@ this.wordle = this.wordle || {}, this.wordle.bundle = function(exports) {
               /** @type {number} */
               var k = 0;
               for (; k < word.length; k++) {
-                if ([o, c].includes(word[k])) {
+                if ([correctLetter, c].includes(word[k])) {
                   if (o[obj[k]]) {
                     o[obj[k]] += 1;
                   } else {
@@ -14078,7 +14087,7 @@ this.wordle = this.wordle || {}, this.wordle.bundle = function(exports) {
                 if ((newValuesArr[f] || 0) < o[f]) {
                   return {
                     validGuess : false,
-                    errorMessage : "Guess must contain ".concat(f.toUpperCase())
+                    errorMessage : "У слове павінна быць ".concat(f.toUpperCase())
                   };
                 }
               }
@@ -14104,7 +14113,7 @@ this.wordle = this.wordle || {}, this.wordle.bundle = function(exports) {
             for (; i < p.length; i++) {
               if (p[i] === s[i] && fdcache[i]) {
                 /** @type {string} */
-                v[i] = o;
+                v[i] = correctLetter;
                 /** @type {boolean} */
                 eccBuffer[i] = false;
                 /** @type {boolean} */
@@ -14709,7 +14718,7 @@ this.wordle = this.wordle || {}, this.wordle.bundle = function(exports) {
                       /** @type {string} */
                       var p = "";
                       switch(type) {
-                        case o:
+                        case correctLetter:
                           p = function(aRoundNumber) {
                             return aRoundNumber ? String.fromCodePoint("0x1F7E7") : String.fromCodePoint("0x1F7E9");
                           }(i);
