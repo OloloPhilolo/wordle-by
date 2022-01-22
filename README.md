@@ -1,6 +1,6 @@
 Reverse engineered from [original WORDLE game](https://www.powerlanguage.co.uk/wordle/) of Josh Wardle. All rights belong to them.
 
-Асноўная крыніца словаў: слоўнікі з рэсурсаў [Энцыкляпедыя электронная](http://www.slounik.org/sbm/) і [Беларускай палічкі](http://www.knihi.com/).
+Асноўная крыніца словаў: слоўнікі з рэсурсаў [Энцыкляпедыя электронная](http://www.slounik.org/sbm/) і [Беларуская палічка](http://www.knihi.com/).
 
 Зваротная сувязь з аўтарам беларускага WORDLE / ЎОРДЛІ:
 * паведамленні пабліка [«филолобайки дилетанта»](https://vk.com/ololo_philolo) Укантакце;
