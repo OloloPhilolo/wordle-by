@@ -14731,7 +14731,7 @@ this.wordle = this.wordle || {}, this.wordle.bundle = function(exports) {
                           break;
                         case bytes:
                           p = function(suppressDisabledCheck) {
-                            return suppressDisabledCheck ? String.fromCodePoint("0x2B1C") : String.fromCodePoint("0x2B1C");
+                            return suppressDisabledCheck ? String.fromCodePoint("0x2B1B") : String.fromCodePoint("0x2B1C");
                           }(element);
                       }
                       url = url + p;
