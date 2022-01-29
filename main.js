@@ -14648,7 +14648,7 @@ this.wordle = this.wordle || {}, this.wordle.bundle = function(exports) {
           var cursor = document.createElement("div");
           cursor.classList.add("no-data");
           /** @type {string} */
-          cursor.innerText = "No Data";
+          cursor.innerText = "Няма дадзеных!";
           overlay.appendChild(cursor);
         } else {
           /** @type {number} */
