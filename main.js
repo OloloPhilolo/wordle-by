@@ -1742,7 +1742,7 @@ this.wordle = this.wordle || {}, this.wordle.bundle = function(exports) {
         rowIndex : self.rowIndex,
         boardState : self.boardState,
         evaluations : self.evaluations,
-        solution : self.solution,
+        solution : encodeURI(self.solution),
         gameStatus : self.gameStatus
       }), check("event", "level_start", {
         level_name : combine(self.solution)
@@ -1868,7 +1868,7 @@ this.wordle = this.wordle || {}, this.wordle.bundle = function(exports) {
             rowIndex : this.rowIndex,
             boardState : this.boardState,
             evaluations : this.evaluations,
-            solution : this.solution,
+            solution : encodeURI(this.solution),
             gameStatus : this.gameStatus,
             lastPlayedTs : Date.now()
           });
